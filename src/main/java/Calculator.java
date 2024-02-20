@@ -1,23 +1,23 @@
 // This is a calculator class again lol hehe more tests
 class Calculator {
 
-    Calculator(){
+    Calculator() {
 
     }
 
-    int add(int a , int b){
+    int add(int a, int b) {
         return a + b;
     }
 
-    int subtract(int a , int b){
+    int subtract(int a, int b) {
         return a - b;
     }
 
-    int multiply(int a , int b){
+    int multiply(int a, int b) {
         return a * b;
     }
 
-    int divide(int a , int b){
+    int divide(int a, int b) {
         return a / b;
     }
 
@@ -37,33 +37,25 @@ class Calculator {
     .
     etc
      */
-    int fibonacciNumberFinder(int n){
-        return 0;
+    int fibonacciNumberFinder(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        int a = 0, b = 1, c;
+        for (int i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
     }
 
-
-    /*
-    Returns binary value of the given int number
-    The binary number will be stored as a string
-    if int a = 0 then this method returns: 0
-    if int a = 10 then this method returns: 1010
-    if int a = 16 then this method returns: 10000
-     */
-    String intToBinaryNumber(int number){
-        return null;
+    String intToBinaryNumber(int number) {
+        return Integer.toBinaryString(number);
     }
 
-    /*
-    Create a completely unique String identifier for a given string
-    Each createdID must contain the string n in its unaltered Form
-    if String n = "Jason"
-    then the created ID could be = Jasonklfgn3jknnvksdfm - Because it contains the unaltered String n and is unique
-
-    if you run this function twice with the same String input, it must return 2 unique String IDs
-     */
-    String createUniqueID(String n){
-        return null;
+    String createUniqueID(String n) {
+        return n + java.util.UUID.randomUUID().toString();
     }
-
-
 }
+
