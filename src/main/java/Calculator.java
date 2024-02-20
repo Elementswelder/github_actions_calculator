@@ -1,4 +1,4 @@
-// This is a calculator class
+// This is a calculator class with a main file
 class Calculator {
 
     Calculator() {
