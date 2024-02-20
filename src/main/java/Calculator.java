@@ -1,4 +1,4 @@
-// This is a calculator class again lol hehe more tests
+// This is a calculator class
 class Calculator {
 
     Calculator() {
